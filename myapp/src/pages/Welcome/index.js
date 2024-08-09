@@ -7,19 +7,21 @@ import {
     TouchableOpacity
 } from "react-native";
 
+import * as Animatable from 'react-native-animatable'
+
 export default function Welcome() {
     return (
         <View style={styles.container}>
             
             <View style={styles.containerLogo}>
-                <Image
-                    source={require('../../assets/logo.png')}
+                <Animatable.Image
+                    source={require('../../assets/background.png')}
                     style={{ width: '100%'}}
                     resizeMode="contain"
                 />
             </View>
 
-            <View style={styles.containerForm}>
+            <Animatable.View  style={styles.containerForm}>
                 <Text style={styles.title}>APP for Mandarin Learning!</Text>
                 <Text style={styles.text}>Começe Já</Text>
 
@@ -27,7 +29,7 @@ export default function Welcome() {
                     <Text style={styles.buttonText}>Acessar</Text>
                 </TouchableOpacity>
 
-            </View>
+            </Animatable.View>
 
         </View>
     );
@@ -36,35 +38,37 @@ export default function Welcome() {
 const styles = StyleSheet.create({
     container:{
         flex:1,
-        backgroundColor:'#ffffff'
+        backgroundColor:'##808080'
     },
     containerLogo:{
         flex:2,
-        backgroundColor:'#ffffff',
+        backgroundColor:'##a0a0a0',
         justifyContent: 'center',
         alignItems: 'center'
     },
     containerForm:{
         flex:1,
-        backgroundColor: '#ffeef2',
+        backgroundColor: '##c0c0c0',
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
         paddingStart: '5%',
         paddingEnd: '5%'
     },
     title:{
-        color:'#ffa2c4',
+        color:'#800000',
         fontSize:24,
         fontWeight:'bold',
         marginTop: 28,
         marginBottom: 12,
+        alignItems: "center",
+        justifyContent: "center"
     },
     text:{
-        color:'#ffa2c4'
+        color:'#800000'
     },
     button:{
         position: 'absolute',
-        backgroundColor: '#ffdfe5',
+        backgroundColor: '##a0a0a0',
         borderRadius: 50,
         paddingVertical: 8,
         width: '60%',
@@ -75,7 +79,7 @@ const styles = StyleSheet.create({
     },
     buttonText:{
         fontSize: '18',
-        color: '#ffa2c4',
+        color: '##a0a0a0',
         fontWeight: 'bold',
     }
 })
