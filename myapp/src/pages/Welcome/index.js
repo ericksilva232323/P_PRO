@@ -9,7 +9,12 @@ import {
 
 import * as Animatable from 'react-native-animatable'
 
+import { useNavigation } from '@react-navigation/native'
+
 export default function Welcome() {
+
+    const navigation = useNavigation();
+
     return (
         <View style={styles.container}>
             
@@ -25,7 +30,10 @@ export default function Welcome() {
                 <Text style={styles.title}>APP for Mandarin Learning!</Text>
                 <Text style={styles.text}>Começe Já</Text>
 
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style=
+                {styles.button}
+                onPress={ () => navigation.navigate('MainMenu')}
+                >
                     <Text style={styles.buttonText}>Acessar</Text>
                 </TouchableOpacity>
 
@@ -75,11 +83,11 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         bottom: '15%',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center'
     },
     buttonText:{
         fontSize: '18',
         color: '##a0a0a0',
-        fontWeight: 'bold',
+        fontWeight: 'bold'
     }
 })

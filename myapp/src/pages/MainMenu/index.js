@@ -8,14 +8,14 @@ const CategoriesScreen = ({ navigation }) => {
 
   return (
     <ImageBackground 
-    source={require('../assets/background.png')} // Replace with your background image
+    source={require('../../assets/background.png')} // Replace with your background image
     style={styles.background}
   >
     <ScrollView contentContainerStyle={styles.container}>
       <Text style={styles.headerText}>中文测验</Text>
 
       <TouchableOpacity style={styles.categoryButton} onPress={() => handleCategoryPress('Greetings')}>
-        <Image source={require('../assets/hi.png')} style={styles.categoryImage} />
+        <Image source={require('../../assets/hi.png')} style={styles.categoryImage} />
       </TouchableOpacity>
 
       <Text style={styles.footerText}>© 2023 工业学徒服务</Text>
@@ -79,3 +79,5 @@ const styles = StyleSheet.create({
   },
 
 });
+
+export default CategoriesScreen;

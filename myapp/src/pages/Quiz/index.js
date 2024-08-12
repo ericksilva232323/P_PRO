@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert, FlatList } from 'react-native';
 import * as Progress from 'react-native-progress'; // Import all exports as Progress
-import quizData from '../assets/quiz.json';
+import quizData from '../../assets/quiz.json';
 
 const QuizScreen = ({ route }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1); // Start with -1 to show the description
@@ -76,26 +76,26 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#fff',
-    padding: 20,
+    padding: 20
   },
   descriptionText: {
     fontSize: 18,
     textAlign: 'center',
-    marginBottom: 20,
+    marginBottom: 20
   },
   startButton: {
     backgroundColor: '#3b5998',
     padding: 15,
-    borderRadius: 10,
+    borderRadius: 10
   },
   startButtonText: {
     color: '#fff',
-    fontSize: 18,
+    fontSize: 18
   },
   questionText: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginBottom: 20
   },
   optionButton: {
     backgroundColor: '#f5deb3',
@@ -103,14 +103,14 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginVertical: 5,
     width: '100%',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   optionText: {
     fontSize: 18,
     color: '#800000',
   },
   progressBar: {
-    marginVertical: 20,
+    marginVertical: 20
   },
 });
 

@@ -35,7 +35,7 @@ export default function SingIn() {
     );
 }
 
-const style = StyleSheet.created({
+const styles = StyleSheet.create({
     container:{
         Flex:1,
         backgroundColor: '#808080'
